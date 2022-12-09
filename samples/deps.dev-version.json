@@ -1,0 +1,259 @@
+{
+    "package": {
+        "system": "MAVEN",
+        "name": "org.neo4j:neo4j-kernel"
+    },
+    "owners": [],
+    "version": {
+        "version": "5.2.0",
+        "symbolicVersions": [],
+        "refreshedAt": 1668803448,
+        "isDefault": true,
+        "description": "\n        Neo4j kernel is a lightweight, embedded Java database designed to\n        store data structured as graphs rather than tables. For more\n        information, see http://neo4j.org.\n    ",
+        "licenses": [
+            "GPL-3.0"
+        ],
+        "dependentCount": 58,
+        "dependentCountDirect": 32,
+        "dependentCountIndirect": 26,
+        "links": {
+            "origins": [
+                "https://search.maven.org/artifact/org.neo4j/neo4j-kernel/5.2.0/jar"
+            ],
+            "homepage": "http://components.neo4j.org/${project.artifactId}/${project.version}",
+            "issues": "https://github.com/neo4j/neo4j/issues",
+            "repo": "https://github.com/neo4j/neo4j"
+        },
+        "projects": [
+            {
+                "type": "GITHUB",
+                "name": "neo4j/neo4j",
+                "observedAt": 1669135723,
+                "issues": 285,
+                "forks": 2208,
+                "stars": 10663,
+                "description": "Graphs for Everyone",
+                "license": "non-standard",
+                "displayName": "neo4j/neo4j",
+                "link": "https://github.com/neo4j/neo4j",
+                "scorecardV2": {
+                    "date": "2022-11-14",
+                    "repo": {
+                        "name": "github.com/neo4j/neo4j",
+                        "commit": "3aa6dbe636079f58793ecf368de6770ec48aa95f"
+                    },
+                    "scorecard": {
+                        "version": "v4.8.0-66-ga78b27d",
+                        "commit": "a78b27d14e741ac1f541ce12bb71a7c60426cb6a"
+                    },
+                    "check": [
+                        {
+                            "name": "Maintained",
+                            "documentation": {
+                                "short": "Determines if the project is \"actively maintained\".",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#maintained"
+                            },
+                            "score": 10,
+                            "reason": "30 commit(s) out of 30 and 6 issue activity out of 30 found in the last 90 days -- score normalized to 10",
+                            "details": []
+                        },
+                        {
+                            "name": "Code-Review",
+                            "documentation": {
+                                "short": "Determines if the project requires code review before pull requests (aka merge requests) are merged.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#code-review"
+                            },
+                            "score": 0,
+                            "reason": "0 out of last 30 changesets reviewed before merge -- score normalized to 0",
+                            "details": []
+                        },
+                        {
+                            "name": "CII-Best-Practices",
+                            "documentation": {
+                                "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#cii-best-practices"
+                            },
+                            "score": 0,
+                            "reason": "no badge detected",
+                            "details": []
+                        },
+                        {
+                            "name": "Vulnerabilities",
+                            "documentation": {
+                                "short": "Determines if the project has open, known unfixed vulnerabilities.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#vulnerabilities"
+                            },
+                            "score": 10,
+                            "reason": "no vulnerabilities detected",
+                            "details": []
+                        },
+                        {
+                            "name": "Signed-Releases",
+                            "documentation": {
+                                "short": "Determines if the project cryptographically signs release artifacts.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#signed-releases"
+                            },
+                            "score": -1,
+                            "reason": "no releases found",
+                            "details": [
+                                "Warn: no GitHub releases found"
+                            ]
+                        },
+                        {
+                            "name": "Branch-Protection",
+                            "documentation": {
+                                "short": "Determines if the default and release branches are protected with GitHub's branch protection settings.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#branch-protection"
+                            },
+                            "score": 3,
+                            "reason": "branch protection is not maximal on development and all release branches",
+                            "details": [
+                                "Info: 'force pushes' disabled on branch '5.1'",
+                                "Info: 'allow deletion' disabled on branch '5.1'",
+                                "Warn: no status checks found to merge onto branch '5.1'",
+                                "Warn: number of required reviewers is only 0 on branch '5.1'",
+                                "Warn: codeowner review is not required on branch '5.1'",
+                                "Info: 'force pushes' disabled on branch '2.2'",
+                                "Info: 'allow deletion' disabled on branch '2.2'",
+                                "Warn: no status checks found to merge onto branch '2.2'",
+                                "Warn: number of required reviewers is only 0 on branch '2.2'",
+                                "Warn: codeowner review is not required on branch '2.2'"
+                            ]
+                        },
+                        {
+                            "name": "Packaging",
+                            "documentation": {
+                                "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#packaging"
+                            },
+                            "score": -1,
+                            "reason": "no published package detected",
+                            "details": [
+                                "Warn: no GitHub publishing workflow detected"
+                            ]
+                        },
+                        {
+                            "name": "Dangerous-Workflow",
+                            "documentation": {
+                                "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#dangerous-workflow"
+                            },
+                            "score": 10,
+                            "reason": "no dangerous workflow patterns detected",
+                            "details": []
+                        },
+                        {
+                            "name": "License",
+                            "documentation": {
+                                "short": "Determines if the project has defined a license.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#license"
+                            },
+                            "score": 10,
+                            "reason": "license file detected",
+                            "details": [
+                                "Info: : LICENSE.txt:1"
+                            ]
+                        },
+                        {
+                            "name": "Token-Permissions",
+                            "documentation": {
+                                "short": "Determines if the project's workflows follow the principle of least privilege.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#token-permissions"
+                            },
+                            "score": 10,
+                            "reason": "tokens are read-only in GitHub workflows",
+                            "details": []
+                        },
+                        {
+                            "name": "Dependency-Update-Tool",
+                            "documentation": {
+                                "short": "Determines if the project uses a dependency update tool.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#dependency-update-tool"
+                            },
+                            "score": 0,
+                            "reason": "no update tool detected",
+                            "details": [
+                                "Warn: Config file not detected in source location for dependabot, renovatebot, Sonatype Lift, or\n\t\t\tPyUp (Python). We recommend setting this configuration in code so it can be easily verified by others."
+                            ]
+                        },
+                        {
+                            "name": "SAST",
+                            "documentation": {
+                                "short": "Determines if the project uses static code analysis.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#sast"
+                            },
+                            "score": 0,
+                            "reason": "no SAST tool detected",
+                            "details": [
+                                "Warn: no pull requests merged into dev branch",
+                                "Warn: CodeQL tool not detected"
+                            ]
+                        },
+                        {
+                            "name": "Binary-Artifacts",
+                            "documentation": {
+                                "short": "Determines if the project has generated executable (binary) artifacts in the source repository.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#binary-artifacts"
+                            },
+                            "score": 6,
+                            "reason": "binaries present in source code",
+                            "details": [
+                                "Warn: binary detected: community/neo4j/src/test/resources/prunsrv-amd64.exe:1",
+                                "Warn: binary detected: community/neo4j/src/test/resources/prunsrv-i386.exe:1",
+                                "Warn: binary detected: packaging/standalone/src/main/distribution/shell-scripts/bin/tools/prunsrv-amd64.exe:1",
+                                "Warn: binary detected: packaging/standalone/src/main/distribution/shell-scripts/bin/tools/prunsrv-i386.exe:1"
+                            ]
+                        },
+                        {
+                            "name": "Fuzzing",
+                            "documentation": {
+                                "short": "Determines if the project uses fuzzing.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#fuzzing"
+                            },
+                            "score": 0,
+                            "reason": "project is not fuzzed",
+                            "details": []
+                        },
+                        {
+                            "name": "Security-Policy",
+                            "documentation": {
+                                "short": "Determines if the project has published a security policy.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#security-policy"
+                            },
+                            "score": 10,
+                            "reason": "security policy file detected",
+                            "details": [
+                                "Info: Found linked content in security policy: github.com/neo4j/.github/SECURITY.md",
+                                "Info: Found text in security policy: github.com/neo4j/.github/SECURITY.md",
+                                "Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/neo4j/.github/SECURITY.md",
+                                "Info: security policy detected in org repo: github.com/neo4j/.github/SECURITY.md"
+                            ]
+                        },
+                        {
+                            "name": "Pinned-Dependencies",
+                            "documentation": {
+                                "short": "Determines if the project has declared and pinned the dependencies of its build process.",
+                                "url": "https://github.com/ossf/scorecard/blob/a78b27d14e741ac1f541ce12bb71a7c60426cb6a/docs/checks.md#pinned-dependencies"
+                            },
+                            "score": 7,
+                            "reason": "dependency not pinned by hash detected -- score normalized to 7",
+                            "details": [
+                                "Warn: containerImage not pinned by hash: community/cypher-shell/packaging/test/debian/Dockerfile:1: pin your Docker image by updating debian to debian@sha256:3066ef83131c678999ce82e8473e8d017345a30f5573ad3e44f62e5c9c46442b",
+                                "Warn: containerImage not pinned by hash: community/cypher-shell/packaging/test/rpm/Dockerfile:1: pin your Docker image by updating fedora to fedora@sha256:f99efcddc4dd6736d8a88cc1ab6722098ec1d77dbf7aed9a7a514fc997ca08e0",
+                                "Info: GitHub-owned GitHubActions are pinned",
+                                "Info: Third-party GitHubActions are pinned",
+                                "Info: no insecure (not pinned by hash) dependency downloads found in Dockerfiles",
+                                "Info: no insecure (not pinned by hash) dependency downloads found in shell scripts"
+                            ]
+                        }
+                    ],
+                    "metadata": [],
+                    "score": 5.7
+                }
+            }
+        ],
+        "advisories": [],
+        "relatedPackages": {}
+    },
+    "defaultVersion": "5.2.0"
+}
