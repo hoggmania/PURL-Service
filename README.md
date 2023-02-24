@@ -1,3 +1,6 @@
+[![OpenSSF
+Scorecard](https://api.securityscorecards.dev/projects/github.com/hoggmania/PURL-Service/badge)](https://api.securityscorecards.dev/projects/github.com/hoggmania/PURL-Service)
+
 # AST-SBOM-Service Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
